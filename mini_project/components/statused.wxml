@@ -1,0 +1,15 @@
+<!--components/mycomponent.wxml-->
+<view class="cart" data-pid="{{pid}}">
+	<view class="image">
+		<image src="{{url}}"></image>
+	</view>
+	<view class="com">
+		<view class="pname">{{pname}}</view>
+		<view class="oper">
+			<view class="price">{{price}}</view>
+			<view class="cnt">
+				<input type="text" value="{{cnt}}" disabled="disabled" />
+			</view>
+		</view>
+	</view>
+</view>

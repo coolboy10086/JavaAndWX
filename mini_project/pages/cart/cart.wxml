@@ -1,0 +1,44 @@
+<view style="display: flex;justify-content: space-between;padding: 10rpx;">
+	<swiper display-multiple-items="3" circular="true" id="sw1" bindchange="menu" current="{{idx}}">
+		<swiper-item><view class="center {{idx==0?'active':''}}" data-idx="0" bind:tap="ch">全部</view></swiper-item>
+		<swiper-item><view  class="center {{idx==1?'active':''}}"data-idx="1" bind:tap="ch">跨店满减</view></swiper-item>
+		<swiper-item><view  class="center {{idx==2?'active':''}}"data-idx="2" bind:tap="ch">降价</view></swiper-item>
+		<swiper-item><view  class="center {{idx==3?'active':''}}" data-idx="3" bind:tap="ch">筛选</view></swiper-item>
+	</swiper>
+	<icon type="search"></icon>
+</view>
+
+<swiper id="sw2" current="{{idx}}" bindchange="menu" circular="true" 	indicator-dots="true">
+ <swiper-item><view style="height:300rpx;background-color: #f00; color:#fff"><image src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000367/21666342310/FocusFullshop/CkRqZnMvdDEvMjQ5ODg4LzE2LzEyNjk1LzEyMDU0NS82Njc5Y2M0NEZlZDczODZjMS9mMWRiNjM1YWViYWMyYWJmLnBuZxIJMy10eV8wXzU0MAI474t6QhAKDOato-Wkp-m4oeiCiRABQhAKDOWKsueIhuWVhuWTgRACQhAKDOeri-WNs-aKoui0rRAGQgoKBui2heWAvBAHWKbLqNtQ/cr/s/q.jpg" style="width: 100%;" mode=""/></view></swiper-item>
+<swiper-item><view style="height:300rpx;background-color: #0f0; color:#100"><image src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000368/10038577514656/FocusFullshop/CkNqZnMvdDEvMjI3MjE4LzM0LzIxMjM0LzY3Mjk0LzY2NzFlMTFhRjc5ZjQxYTkxL2E3ZTg1MGE1NWMxZTU0ZmUucG5nEgk0LXR5XzBfNTUwAjjwi3pCGQoV6KW_6Zeo5a2Q5byA5YWz5o-S5bqnEAFCEwoP5LyY5oOg5Lqr5LiN5YGcEAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG6LaF5YC8EAdYoJHjzpSkAg/cr/s/q.jpg" style="width: 100%;" mode=""/></view></swiper-item>
+<swiper-item><view style="height:300rpx;background-color: #00f; color:#fff"><image src="https://imgcps.jd.com/ling-cubic/ling4/lab/amZzL3QxLzE2NDYzOC8zMi8xMjY4OS8xNTg0OTUvNjA0YWRhM2JFOGMxNWE2ODIvOGZiMmYzYmZkMjQzYjQ2Yi5wbmc/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/1635188868130873346/cr/s/q.jpg" style="width: 100%;" mode=""/></view></swiper-item>
+<swiper-item><view style="height:300rpx;background-color: #f0f; color:#0f0"><image src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000366/100018357510/FocusFullshop/CkNqZnMvdDEvMTg1NjIzLzMzLzQ0NTQ5LzM1NzE1LzY2Njc1MjNiRjQ1ODQ1NDBhLzdiYTk3ZDZhN2E0YjlhOTgucG5nEgkyLXR5XzBfNTMwAjjui3pCEwoP5Y2h6JCo5bid56m66LCDEAFCEAoM5aW96LSn5rGH6IGaEAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG5LyY6LSoEAdYhoq8zPQC/cr/s/q.jpg" style="width: 100%;" mode=""/></view></swiper-item>
+</swiper>
+
+
+
+
+<!--pages/cart/cart.wxml-->
+<block wx:for="{{list}}">
+<lcj bindtellFather="tellFather" 
+pname="{{item.pname}}"
+price="{{item.price}}"
+cnt="{{item.cnt}}"
+pid="{{item.pid}}"
+url="{{item.url}}"
+selected="{{item.selected}}"
+status = "{{item.status}}"
+wx:if="{{item.status==0}}"
+></lcj>
+</block>
+<!-- 这里把底部最后一个商品顶上去 -->
+<view style="height: 100rpx;"></view>
+
+<view id="pay">
+<checkbox style="flex: 2;" bind:tap="selectAll" checked="{{sa}}">全选</checkbox>
+<view style="flex: 2;">合计：{{sum}}</view>
+<view bind:tap="pay">结算</view>
+</view>
+
+
+<!-- <image src="../../images/购物车 (1).png" mode="" style="width: 100rpx; height:100rpx ;z-index: 999; position: absolute; bottom: 100rpx; right: 0;" /> -->

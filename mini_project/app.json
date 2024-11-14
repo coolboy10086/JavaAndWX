@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/statused/statused"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "22A",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/Home.png",
+      "selectedIconPath":"/images/Home(1).png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "/images/购物车.png",
+      "selectedIconPath":"/images/购物车 (1).png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "/images/我的.png",
+      "selectedIconPath":"/images/我的 (1).png"
+    }]
+    },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

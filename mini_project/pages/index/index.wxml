@@ -1,0 +1,32 @@
+<!-- view相当于div
+<view>我是主页</view> -->
+<view id="sw">
+  <swiper autoplay="true" duration="1000" interval="1000" circular="loop" indicator-dots="true" indicator-color="rgb(255,255,255)">
+    <swiper-item>点赞</swiper-item>
+    <swiper-item>投币</swiper-item>
+    <swiper-item>收藏</swiper-item>
+  </swiper>
+</view>
+<view style="display: flex;min-height: 600rpx;">
+  <view style="flex:1;padding: 20rpx;">
+    <block wx:for="{{plist}}" wx:key="index">
+      <product wx:if="{{index%2==0}}" url="{{item.url}}" pid="{{item.pid}}" pname="{{item.pname}}" price="{{item.price}}" amount="{{item.amount}}" discount="{{item.discount}}" description="{{item.description}}">
+        <view wx:if="{{item.discount}}" slot="bb" class="bb">买贵赔二</view>
+        <view wx:if="{{item.discount}}" slot="aa" class="aa">双11特惠</view>
+      </product>
+    </block>
+  </view>
+  <view style="flex:1;padding: 20rpx;">
+    <block wx:for="{{plist}}" wx:key="index">
+      <product wx:if="{{index%2==1}}" url="{{item.url}}" pid="{{item.pid}}" pname="{{item.pname}}" price="{{item.price}}" amount="{{item.amount}}" discount="{{item.discount}}" description="{{item.description}}">
+        <view wx:if="{{item.discount}}" slot="bb" class="bb">买贵赔二</view>
+        <view wx:if="{{item.discount}}" slot="aa" class="aa">双11特惠</view>
+      </product>
+    </block>
+  </view>
+</view>
+
+<!--  -->
+<!-- <block wx:for="{{list}}">
+  <view bindtap="aaa" data-baby="{{item}}" id="tips" class="{{item%2==0?'ttt':'kkk'}}">你是本站第<text>{{item}}</text>个用户</view>
+</block> -->

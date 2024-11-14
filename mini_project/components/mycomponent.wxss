@@ -1,0 +1,82 @@
+page {
+	background-color: #ddd;
+}
+view {
+	box-sizing: border-box;
+}
+
+.cart {
+	box-shadow: 0rpx 0rpx 10rpx #ccc;
+	border-radius: 20rpx;
+	width: 90%;
+	height: 200rpx;
+	background-color: #fff;
+	margin: 20rpx auto;
+	display: flex;
+}
+
+.sel {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image {
+	flex: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image image {
+	width: 90%;
+	height: 90%;
+	border-radius: 20rpx;
+}
+
+.com {
+	flex: 5;
+	display: flex;
+	flex-direction: column;
+}
+
+.pname {
+	flex: 1;
+	padding: 20rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.oper {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20rpx;
+}
+
+.cnt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cnt input {
+	width: 60rpx;
+	text-align: center;
+	margin: 0rpx 10rpx;
+	border: 0rpx;
+	z-index: 0;/*修改表单元素的默认深度 */
+}
+
+.price {
+	color: #f00;
+	font-size: 36rpx;
+}
+
+.price::before {
+	content: '￥';
+}

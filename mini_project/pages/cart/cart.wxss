@@ -1,0 +1,55 @@
+#sw1{
+	height: 50rpx;
+	width: 680rpx;
+}
+icon{
+	height: 50rpx;
+	width: 70rpx;
+}
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.active{
+	font-weight: bold;
+	color: #900;
+}
+#sw2 view{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+checkbox .wx-checkbox-input{
+	width: 36rpx !important;
+	height: 36rpx !important;
+	border-radius: 50% !important;
+}
+checkbox .wx-checkbox-input-checked::before{
+	background: transparent !important;
+}
+
+checkbox .wx-checkbox-input-checked{
+	background-color: #f50 !important;
+	border-color: none !important;
+	color:#f50 !important;
+}
+#pay{
+	width: 100%;
+	background-color: white;
+	color:black;
+	height: 100rpx;
+	position: fixed;
+	bottom:0rpx;
+	display: flex;
+	align-items: center;
+	padding:20rpx;
+}
+#pay view:nth-child(3){
+	flex: 1;
+	text-align:center; 
+	padding-right: 10rpx;
+	background-color: orange;
+	color: white;
+	border-radius: 30rpx;
+}

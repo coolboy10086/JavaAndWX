@@ -1,0 +1,10 @@
+view{
+	box-sizing: border-box;
+}
+view,input,button{font-size: 28rpx;}
+.item{
+	display: flex;
+	justify-content: space-between;
+	padding: 10rpx;
+	border-bottom: 2rpx solid #ddd;
+}

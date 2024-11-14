@@ -1,0 +1,16 @@
+<!--pages/statused/statused.wxml-->
+<view style="width: 100%; height: 150rpx;background-color: lightblue; text-align: center; line-height: 130rpx; font-size:x-large;" >历史记录</view>
+
+
+<block wx:for="{{list}}">
+<lcj bindtellFather="tellFather" 
+pname="{{item.pname}}"
+price="{{item.price}}"
+cnt="{{item.cnt}}"
+pid="{{item.pid}}"
+url="{{item.url}}"
+selected="{{item.selected}}"
+status = "{{item.status}}"
+wx:if="{{item.status==1}}"
+></lcj>
+</block>

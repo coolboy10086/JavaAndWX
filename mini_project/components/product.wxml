@@ -1,0 +1,14 @@
+<view class="cart">
+    <image src="{{url}}" class="image"></image>
+    <view class="pname">
+      {{pname}}
+    </view>
+    <view>简介:{{description}}</view>
+    <slot name="aa"></slot>
+    <view class="price">{{price}}
+    </view>
+
+    <view class="tips">库存：{{amount}} </view>
+    <slot name="bb"></slot>
+    <view class="addCart" bind:tap="addCart"data-value="{{pid}}">+</view>
+</view>
